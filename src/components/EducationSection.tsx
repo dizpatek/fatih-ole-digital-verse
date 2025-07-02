@@ -16,7 +16,7 @@ const EducationSection = () => {
             <div className="space-y-4">
               <div className="border-l-2 border-blue-500 pl-4">
                 <h4 className="font-semibold text-blue-300">Şişli Meslek Yüksek Okulu</h4>
-                <p className="text-gray-400 text-sm">Elektronik Ürünler Ustası - 2024</p>
+                <p className="text-gray-400 text-sm">Elektronik Ürünler Kalfalığı, Ustalığı, Usta Öğreticiliği - 2024</p>
               </div>
               <div className="border-l-2 border-purple-500 pl-4">
                 <h4 className="font-semibold text-purple-300">İstanbul Üniversitesi</h4>
@@ -26,12 +26,28 @@ const EducationSection = () => {
                 <h4 className="font-semibold text-green-300">Anadolu Üniversitesi</h4>
                 <p className="text-gray-400 text-sm">Kamu Yönetimi - 2014</p>
               </div>
+              <div className="border-l-2 border-yellow-500 pl-4">
+                <h4 className="font-semibold text-yellow-300">Kasımpaşa Anadolu Fen Lisesi</h4>
+                <p className="text-gray-400 text-sm">Fen-Sayısal (2009) - Not Ortalaması: 4.00</p>
+              </div>
             </div>
           </div>
           
           <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700">
             <h3 className="text-xl font-semibold mb-6 text-purple-400">Sertifikalar & Üyelikler</h3>
             <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <Award className="text-yellow-400" size={16} />
+                <span className="text-gray-300">Elektronik Ürünler Kalfalık Sertifikası</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="text-yellow-400" size={16} />
+                <span className="text-gray-300">Elektronik Ürünler Ustalık Sertifikası</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="text-yellow-400" size={16} />
+                <span className="text-gray-300">Elektronik Ürünler Usta Öğreticilik Sertifikası</span>
+              </div>
               <div className="flex items-center gap-2">
                 <Award className="text-yellow-400" size={16} />
                 <span className="text-gray-300">Basın Fotoğrafçılığı Sertifikası</span>

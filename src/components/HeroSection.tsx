@@ -26,12 +26,16 @@ const HeroSection = () => {
             </div>
           </div>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Teknik Servis Uzmanı • Beat Producer • Sistem Geliştirici • Fotoğrafçı
+            Çok Yönlü Teknik Uzman • Beat Producer • Sistem Geliştirici • Fotoğrafçı
           </p>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
-            Turizm başta olmak üzere mekatronik konularında yenilikçi ve geliştirilmiş tecrübeye dayanan, 
-            bu alanlarda faaliyette olan tüm ürünlerin bakım onarım kullanım ve kontrol eğitimini verebilecek 
-            iyi derecede eğitim düzeyine sahip teknik İngilizce anlayabilen ve konuşabilen bir uzmanım.
+          <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed mb-8">
+            <span className="text-blue-400 font-semibold">10+ yıllık deneyime sahip</span> çok yönlü teknik uzman olarak, 
+            <span className="text-purple-400"> turizm ve mekatronik</span> alanlarında yenilikçi çözümler üretiyorum. 
+            <span className="text-green-400"> Elektronik cihaz tamiri</span>nden <span className="text-yellow-400">network sistemleri</span>ne, 
+            <span className="text-pink-400"> müzik prodüksiyonu</span>ndan <span className="text-cyan-400">fotoğrafçılık</span>a kadar geniş bir yelpazede 
+            profesyonel hizmet sunuyorum. <span className="text-orange-400">Teknik İngilizce</span> yetkinliğim ile uluslararası projeler 
+            geliştirip, <span className="text-red-400">tersine mühendislik</span> ve <span className="text-indigo-400">sistem entegrasyonu</span> 
+            konularında uzmanlaşmış bir teknisyenim.
           </p>
           
           {/* Öne Çıkan Özellikler */}
@@ -46,7 +50,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2 text-green-400">
               <Settings size={20} />
-              <span className="text-sm font-medium">Çok Amaçlı Teknisyen</span>
+              <span className="text-sm font-medium">50+ Teknik Yetkinlik</span>
             </div>
             <div className="flex items-center gap-2 text-yellow-400">
               <Globe size={20} />
