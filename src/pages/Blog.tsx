@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Calendar, Clock, Tag, ArrowRight, Code, Music, Wrench, Camera, Zap, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 
 const Blog = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCategory, setSelectedCategory] = useState('Tümü');
-  const postsPerPage = 6;
-
   const blogPosts = [
     {
       id: 1,
@@ -18,8 +15,7 @@ const Blog = () => {
       date: '2024-01-15',
       readTime: '12 dk',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=300&fit=crop',
-      tags: ['AI', 'Python', 'Chatbot', 'OpenAI', 'Flask', 'Redis'],
-      content: 'Bu yazıda modern yapay zeka teknolojilerini kullanarak nasıl profesyonel bir chatbot geliştirdiğimi anlatacağım...'
+      tags: ['AI', 'Python', 'Chatbot', 'OpenAI', 'Flask', 'Redis']
     },
     {
       id: 2,
@@ -30,8 +26,7 @@ const Blog = () => {
       date: '2024-01-12',
       readTime: '15 dk',
       image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop',
-      tags: ['Tekno', 'Ableton', 'Roland TB-303', 'Sound Design', 'Mastering'],
-      content: 'Tekno müzik prodüksiyonunda kullandığım teknikler ve ekipmanlar hakkında detaylı bilgiler...'
+      tags: ['Tekno', 'Ableton', 'Roland TB-303', 'Sound Design', 'Mastering']
     },
     {
       id: 3,
@@ -42,8 +37,7 @@ const Blog = () => {
       date: '2024-01-10',
       readTime: '10 dk',
       image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=300&fit=crop',
-      tags: ['Dental', 'X-Ray', 'Sterilizasyon', 'Medikal Cihaz', 'Kalibrasyon'],
-      content: 'Dental klinik teknolojilerinde edindiğim deneyimler ve uygulama örnekleri...'
+      tags: ['Dental', 'X-Ray', 'Sterilizasyon', 'Medikal Cihaz', 'Kalibrasyon']
     },
     {
       id: 4,
@@ -54,8 +48,7 @@ const Blog = () => {
       date: '2024-01-08',
       readTime: '18 dk',
       image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=300&fit=crop',
-      tags: ['Crypto', 'Trading Bot', 'Python', 'Binance API', 'Teknik Analiz'],
-      content: 'Kripto para trading botları geliştirme sürecinde öğrendiğim stratejiler...'
+      tags: ['Crypto', 'Trading Bot', 'Python', 'Binance API', 'Teknik Analiz']
     },
     {
       id: 5,
@@ -66,8 +59,7 @@ const Blog = () => {
       date: '2024-01-05',
       readTime: '14 dk',
       image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=300&fit=crop',
-      tags: ['HVAC', 'Fancoil', 'AHU', 'Chiller', 'Bakım', 'Otelcilik'],
-      content: 'Otelcilik sektöründe HVAC sistemleri konusundaki deneyimlerim...'
+      tags: ['HVAC', 'Fancoil', 'AHU', 'Chiller', 'Bakım', 'Otelcilik']
     },
     {
       id: 6,
@@ -78,8 +70,7 @@ const Blog = () => {
       date: '2024-01-03',
       readTime: '8 dk',
       image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=600&h=300&fit=crop',
-      tags: ['Basın Fotoğrafçılığı', 'Canon EOS R5', 'Kompozisyon', 'Etik'],
-      content: 'Basın fotoğrafçılığında edindiğim deneyimler ve teknik bilgiler...'
+      tags: ['Basın Fotoğrafçılığı', 'Canon EOS R5', 'Kompozisyon', 'Etik']
     },
     {
       id: 7,
@@ -90,8 +81,7 @@ const Blog = () => {
       date: '2024-01-01',
       readTime: '16 dk',
       image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=300&fit=crop',
-      tags: ['Network', 'Cisco', 'Ubiquiti', 'pfSense', 'VLAN', 'Güvenlik'],
-      content: 'Kurumsal network altyapısı kurulum ve güvenlik uygulamaları...'
+      tags: ['Network', 'Cisco', 'Ubiquiti', 'pfSense', 'VLAN', 'Güvenlik']
     },
     {
       id: 8,
@@ -102,8 +92,7 @@ const Blog = () => {
       date: '2023-12-28',
       readTime: '11 dk',
       image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&h=300&fit=crop',
-      tags: ['Asansör', 'Otis', 'Schindler', 'Kone', 'Bakım', 'Güvenlik'],
-      content: 'Asansör teknolojileri ve bakım süreçleri hakkında detaylı bilgiler...'
+      tags: ['Asansör', 'Otis', 'Schindler', 'Kone', 'Bakım', 'Güvenlik']
     },
     {
       id: 9,
@@ -114,8 +103,7 @@ const Blog = () => {
       date: '2023-12-25',
       readTime: '20 dk',
       image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=300&fit=crop',
-      tags: ['IoT', 'Arduino', 'Raspberry Pi', 'MQTT', 'Akıllı Ev', 'Otomasyon'],
-      content: 'IoT tabanlı akıllı ev sistemleri geliştirme sürecim ve teknikleri...'
+      tags: ['IoT', 'Arduino', 'Raspberry Pi', 'MQTT', 'Akıllı Ev', 'Otomasyon']
     },
     {
       id: 10,
@@ -126,8 +114,7 @@ const Blog = () => {
       date: '2023-12-22',
       readTime: '13 dk',
       image: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&h=300&fit=crop',
-      tags: ['CNC', 'CAD-CAM', 'Üretim', 'Tersine Mühendislik', 'Kalite Kontrol'],
-      content: 'CNC makineler ve CAD-CAM yazılımları ile üretim deneyimlerim...'
+      tags: ['CNC', 'CAD-CAM', 'Üretim', 'Tersine Mühendislik', 'Kalite Kontrol']
     },
     {
       id: 11,
@@ -138,8 +125,7 @@ const Blog = () => {
       date: '2023-12-20',
       readTime: '9 dk',
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=300&fit=crop',
-      tags: ['Sosyal Medya', 'İçerik Stratejisi', 'Görsel Tasarım', 'Engagement'],
-      content: 'Sosyal medya pazarlama stratejileri ve içerik üretimi deneyimlerim...'
+      tags: ['Sosyal Medya', 'İçerik Stratejisi', 'Görsel Tasarım', 'Engagement']
     },
     {
       id: 12,
@@ -150,8 +136,7 @@ const Blog = () => {
       date: '2023-12-18',
       readTime: '12 dk',
       image: 'https://images.unsplash.com/photo-1471306224500-6d0d218be372?w=600&h=300&fit=crop',
-      tags: ['Belgesel', 'Fotoğrafçılık', 'Hikaye Anlatımı', 'Sosyal Konular'],
-      content: 'Belgesel fotoğrafçılığında hikaye anlatımı ve etik yaklaşımlar...'
+      tags: ['Belgesel', 'Fotoğrafçılık', 'Hikaye Anlatımı', 'Sosyal Konular']
     }
   ];
 
@@ -166,28 +151,6 @@ const Blog = () => {
     { name: 'Network', count: blogPosts.filter(post => post.category === 'Network').length },
     { name: 'IoT', count: blogPosts.filter(post => post.category === 'IoT').length }
   ];
-
-  // Kategori filtreleme
-  const filteredPosts = selectedCategory === 'Tümü' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
-
-  // Sayfalama
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-  const startIndex = (currentPage - 1) * postsPerPage;
-  const endIndex = startIndex + postsPerPage;
-  const currentPosts = filteredPosts.slice(startIndex, endIndex);
-
-  const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
-    setCurrentPage(1);
-  };
-
-  const loadMorePosts = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
 
   return (
     <Layout>
@@ -206,12 +169,7 @@ const Blog = () => {
           {categories.map((category, index) => (
             <button
               key={index}
-              onClick={() => handleCategoryChange(category.name)}
-              className={`px-4 py-2 border rounded-full text-sm transition-all duration-300 ${
-                selectedCategory === category.name
-                  ? 'bg-blue-500 border-blue-500 text-white'
-                  : 'bg-gray-800/50 hover:bg-gray-700/50 border-gray-600 hover:border-blue-500/50 text-gray-300 hover:text-white'
-              }`}
+              className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600 hover:border-blue-500/50 rounded-full text-gray-300 hover:text-white transition-all duration-300 text-sm"
             >
               {category.name} ({category.count})
             </button>
@@ -226,15 +184,14 @@ const Blog = () => {
               <span className="text-gray-400 text-sm">En Popüler</span>
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">
-              <Link to={`/blog/${blogPosts[0].id}`} className="hover:text-blue-400 transition-colors">
-                {blogPosts[0].title}
-              </Link>
+              Yapay Zeka ile Çok Dilli Chatbot Geliştirme: Sıfırdan Profesyonel Seviyeye
             </h2>
             <p className="text-gray-300 mb-4">
-              {blogPosts[0].excerpt}
+              OpenAI GPT-4 API kullanarak geliştirdiğim chatbot sistemi nasıl 40+ dilde konuşuyor ve 
+              otomatik ülke tespiti yapıyor? Python, Flask ve Redis ile gerçek zamanlı çözümler...
             </p>
             <div className="flex items-center gap-4 text-sm text-gray-400">
-              <span>{blogPosts[0].readTime} okuma</span>
+              <span>12 dk okuma</span>
               <span>•</span>
               <span>2,450 görüntüleme</span>
               <span>•</span>
@@ -244,8 +201,8 @@ const Blog = () => {
         </div>
 
         {/* Blog Yazıları */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {currentPosts.map((post) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
             <article
               key={post.id}
               className="bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -321,35 +278,11 @@ const Blog = () => {
         </div>
 
         {/* Daha Fazla Yükle */}
-        {currentPage < totalPages && (
-          <div className="text-center mb-12">
-            <button 
-              onClick={loadMorePosts}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              Daha Fazla Yazı Yükle ({filteredPosts.length - endIndex} kaldı)
-            </button>
-          </div>
-        )}
-
-        {/* Sayfalama */}
-        {totalPages > 1 && (
-          <div className="flex justify-center gap-2 mb-12">
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => setCurrentPage(i + 1)}
-                className={`px-4 py-2 rounded-lg transition-colors ${
-                  currentPage === i + 1
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
-          </div>
-        )}
+        <div className="text-center mt-12">
+          <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+            Daha Fazla Yazı Yükle
+          </button>
+        </div>
 
         {/* Blog İstatistikleri */}
         <div className="grid md:grid-cols-4 gap-6 mt-16 text-center">

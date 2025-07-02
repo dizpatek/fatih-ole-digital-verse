@@ -37,6 +37,16 @@ const Iletisim = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
+                  <MapPin className="text-purple-400 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-purple-400 mb-1">Adres</h3>
+                    <p className="text-gray-300">Süruri Mehmet Efendi Mahallesi</p>
+                    <p className="text-gray-300">Eyyühüm Sokak</p>
+                    <p className="text-gray-300">Beyoğlu, İstanbul - Türkiye</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
                   <Globe className="text-yellow-400 mt-1" size={24} />
                   <div>
                     <h3 className="font-semibold text-yellow-400 mb-1">Dil Desteği</h3>
@@ -67,6 +77,16 @@ const Iletisim = () => {
                 <div>
                   <h3 className="font-semibold text-green-300 mb-2">Çalışma Pozisyonları</h3>
                   <p className="text-gray-300 text-sm">Teknik Uzman, Şef, Amir, Müdür, Tekniker, Teknisyen</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-yellow-300 mb-2">Maaş Beklentisi</h3>
+                  <p className="text-gray-300 text-sm">75.000 TL+ (Net) + Yol-Yemek-Sigorta-Prim</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-purple-300 mb-2">Çalışma Şekli</h3>
+                  <p className="text-gray-300 text-sm">Tam zamanlı + Ek mesai ücretli</p>
                 </div>
               </div>
             </div>
