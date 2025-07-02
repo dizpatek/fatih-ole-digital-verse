@@ -1,216 +1,264 @@
 
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Music } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin, Clock, User, Globe, MessageSquare, Send } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const Iletisim = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Form gönderme işlemi burada olacak
-    alert('Mesajınız gönderildi! En kısa sürede dönüş yapacağım.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <Layout>
-      <div className="container mx-auto max-w-4xl px-4 py-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+      <div className="container mx-auto max-w-6xl px-4 py-20">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
           İletişim
         </h1>
-        
-        <p className="text-lg text-gray-300 text-center mb-16 max-w-2xl mx-auto">
-          Proje fikirleri, iş birlikleri veya sadece merhaba demek için benimle iletişime geçebilirsiniz. 
-          Her türlü mesajınızı memnuniyetle karşılıyorum!
-        </p>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* İletişim Bilgileri */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 text-white">İletişim Bilgileri</h2>
-            
-            <div className="space-y-6 mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
-                  <Mail className="text-blue-400" size={20} />
+          <div className="space-y-8">
+            <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700">
+              <h2 className="text-2xl font-semibold mb-6 text-blue-400">İletişim Bilgileri</h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <Phone className="text-green-400 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-green-400 mb-1">Telefon</h3>
+                    <p className="text-gray-300">+90 538 22 444 88</p>
+                    <p className="text-gray-500 text-sm">7/24 Ulaşılabilir</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-white">E-posta</h3>
-                  <p className="text-gray-300">fatih.sonturk@example.com</p>
+                
+                <div className="flex items-start gap-4">
+                  <Mail className="text-blue-400 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-blue-400 mb-1">E-posta</h3>
+                    <p className="text-gray-300">dizpatek@gmail.com</p>
+                    <p className="text-gray-500 text-sm">24 saat içinde yanıt</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                  <Phone className="text-green-400" size={20} />
+                
+                <div className="flex items-start gap-4">
+                  <MapPin className="text-purple-400 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-purple-400 mb-1">Adres</h3>
+                    <p className="text-gray-300">Süruri Mehmet Efendi Mahallesi</p>
+                    <p className="text-gray-300">Eyyühüm Sokak</p>
+                    <p className="text-gray-300">Beyoğlu, İstanbul - Türkiye</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-white">Telefon</h3>
-                  <p className="text-gray-300">+90 (555) 123-4567</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                  <MapPin className="text-purple-400" size={20} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white">Konum</h3>
-                  <p className="text-gray-300">İstanbul, Türkiye</p>
+                
+                <div className="flex items-start gap-4">
+                  <Globe className="text-yellow-400 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-yellow-400 mb-1">Dil Desteği</h3>
+                    <p className="text-gray-300">Türkçe (Ana dil)</p>
+                    <p className="text-gray-300">İngilizce (İleri seviye)</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Sosyal Medya */}
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-white">Sosyal Medya</h3>
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"
-                >
-                  <Github className="text-white" size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"
-                >
-                  <Linkedin className="text-white" size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all"
-                >
-                  <Instagram className="text-white" size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors"
-                >
-                  <Music className="text-white" size={20} />
-                </a>
-              </div>
-            </div>
-
-            {/* Çalışma Saatleri */}
-            <div className="mt-8 bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-              <h3 className="text-lg font-bold mb-4 text-white">Çalışma Saatleri</h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Pazartesi - Cuma</span>
-                  <span className="text-gray-300">09:00 - 18:00</span>
+            {/* Çalışma Tercihleri */}
+            <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700">
+              <h2 className="text-2xl font-semibold mb-6 text-purple-400">Çalışma Tercihleri</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-blue-300 mb-2">Tercih Edilen Sektörler</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Bilişim</span>
+                    <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Elektrik-Elektronik</span>
+                    <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Teknik Servis</span>
+                    <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-sm">Telekomünikasyon</span>
+                    <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Turizm-Otelcilik</span>
+                    <span className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-sm">Sağlık</span>
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Cumartesi</span>
-                  <span className="text-gray-300">10:00 - 16:00</span>
+                
+                <div>
+                  <h3 className="font-semibold text-green-300 mb-2">Çalışma Pozisyonları</h3>
+                  <p className="text-gray-300 text-sm">Teknik Uzman, Şef, Amir, Müdür, Tekniker, Teknisyen</p>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Pazar</span>
-                  <span className="text-gray-300">Kapalı</span>
+                
+                <div>
+                  <h3 className="font-semibold text-yellow-300 mb-2">Maaş Beklentisi</h3>
+                  <p className="text-gray-300 text-sm">75.000 TL+ (Net) + Yol-Yemek-Sigorta-Prim</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-purple-300 mb-2">Çalışma Şekli</h3>
+                  <p className="text-gray-300 text-sm">Tam zamanlı + Ek mesai ücretli</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-400 mt-4">
-                * Acil durumlar için 7/24 ulaşabilirsiniz
-              </p>
             </div>
           </div>
 
           {/* İletişim Formu */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 text-white">Mesaj Gönder</h2>
+          <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700">
+            <h2 className="text-2xl font-semibold mb-6 text-blue-400 flex items-center gap-2">
+              <MessageSquare size={24} />
+              Bana Mesaj Gönderin
+            </h2>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Adınız Soyadınız *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
-                  placeholder="Adınızı ve soyadınızı girin"
-                />
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-gray-300 mb-2 text-sm font-medium">
+                    Adınız *
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
+                    placeholder="Adınızı girin"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-gray-300 mb-2 text-sm font-medium">
+                    Soyadınız *
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
+                    placeholder="Soyadınızı girin"
+                    required
+                  />
+                </div>
               </div>
-
+              
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-gray-300 mb-2 text-sm font-medium">
                   E-posta Adresiniz *
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
                   placeholder="ornek@email.com"
+                  required
                 />
               </div>
-
+              
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Konu
+                <label className="block text-gray-300 mb-2 text-sm font-medium">
+                  Telefon Numaranız
                 </label>
                 <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
-                  placeholder="Mesajınızın konusu"
+                  type="tel"
+                  className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-colors"
+                  placeholder="+90 5XX XXX XX XX"
                 />
               </div>
-
+              
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-gray-300 mb-2 text-sm font-medium">
+                  Konu *
+                </label>
+                <select className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-purple-500 focus:outline-none transition-colors">
+                  <option value="">Konu seçin</option>
+                  <option value="teknik-servis">Teknik Servis Talebi</option>
+                  <option value="is-teklifi">İş Teklifi</option>
+                  <option value="proje-danismanlik">Proje Danışmanlığı</option>
+                  <option value="egitim">Eğitim & Mentorluk</option>
+                  <option value="muzik-produksiyon">Müzik Prodüksiyonu</option>
+                  <option value="diger">Diğer</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="block text-gray-300 mb-2 text-sm font-medium">
                   Mesajınız *
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
+                  className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors resize-vertical"
                   placeholder="Mesajınızı buraya yazın..."
-                />
+                  required
+                ></textarea>
               </div>
-
+              
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Send size={20} />
                 Mesajı Gönder
               </button>
             </form>
+          </div>
+        </div>
 
-            <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-              <p className="text-sm text-blue-300">
-                <strong>Hızlı yanıt:</strong> Genellikle 24 saat içinde geri dönüş yapıyorum. 
-                Acil projeler için telefon numaramı kullanabilirsiniz.
-              </p>
+        {/* Referanslar */}
+        <div className="mt-16 bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700">
+          <h2 className="text-2xl font-semibold mb-8 text-green-400 flex items-center gap-2">
+            <User size={24} />
+            Profesyonel Referanslar
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-blue-300 mb-2">Mehmet Yücelay</h3>
+              <p className="text-gray-400 text-sm mb-2">Royal Asansör - Teknik Uzman</p>
+              <p className="text-gray-300 text-sm">0545 569 65 31</p>
+              <p className="text-gray-300 text-sm">m.yucelay@gmail.com</p>
+            </div>
+            
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-purple-300 mb-2">Alparslan Kabil</h3>
+              <p className="text-gray-400 text-sm mb-2">Alpaş Asansör - Üst Düzey Yönetici</p>
+              <p className="text-gray-300 text-sm">0532 284 39 84</p>
+            </div>
+            
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-green-300 mb-2">Kadir Çelebi</h3>
+              <p className="text-gray-400 text-sm mb-2">The Peak Hotel - Üst Düzey Yönetici</p>
+              <p className="text-gray-300 text-sm">0534 766 31 1</p>
+              <p className="text-gray-300 text-sm">kadircelebi@gmail.com</p>
+            </div>
+            
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-yellow-300 mb-2">Nevzat Aydemir</h3>
+              <p className="text-gray-400 text-sm mb-2">CityDent - Üst Düzey Yönetici</p>
+              <p className="text-gray-300 text-sm">0533 601 30 55</p>
+              <p className="text-gray-300 text-sm">yönetim@citydentistanbul.com</p>
+            </div>
+            
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-blue-300 mb-2">Çağlar Aksoylar</h3>
+              <p className="text-gray-400 text-sm mb-2">The Galliard - Üst Düzey Yönetici</p>
+              <p className="text-gray-300 text-sm">0532 256 90 21</p>
+              <p className="text-gray-300 text-sm">caksoylar@thegalliard.com</p>
+            </div>
+            
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-purple-300 mb-2">Volkan Gümüş</h3>
+              <p className="text-gray-400 text-sm mb-2">Dizayn Elektro Pano - Üst Düzey Yönetici</p>
+              <p className="text-gray-300 text-sm">0536 560 92 00</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Hızlı İletişim */}
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg p-8 border border-blue-500/30">
+            <h3 className="text-xl font-semibold mb-4 text-blue-300">Hızlı İletişim</h3>
+            <p className="text-gray-300 mb-6">
+              Teknik destek veya iş birliği için hemen iletişime geçin!
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="tel:+905382244488"
+                className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors"
+              >
+                <Phone size={20} />
+                Hemen Ara
+              </a>
+              <a
+                href="mailto:dizpatek@gmail.com"
+                className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-colors"
+              >
+                <Mail size={20} />
+                E-posta Gönder
+              </a>
             </div>
           </div>
         </div>
