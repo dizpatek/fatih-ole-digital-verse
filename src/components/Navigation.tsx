@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Fatih Ole
+            Fatih Sontürk
           </NavLink>
 
           {/* Desktop Navigation */}
