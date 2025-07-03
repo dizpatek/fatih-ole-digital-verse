@@ -1,13 +1,9 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, Clock, User, Globe, MessageSquare, Send } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const Iletisim = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <Layout>
       <div className="container mx-auto max-w-6xl px-4 py-20">
@@ -63,8 +59,8 @@ const Iletisim = () => {
                     <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Elektrik-Elektronik</span>
                     <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Teknik Servis</span>
                     <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-sm">Telekomünikasyon</span>
-                    <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Sağlık</span>
-                    <span className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-sm">Grafik Tasarım</span>
+                    <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Turizm-Otelcilik</span>
+                    <span className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-sm">Sağlık</span>
                   </div>
                 </div>
                 
@@ -144,7 +140,6 @@ const Iletisim = () => {
                   <option value="proje-danismanlik">Proje Danışmanlığı</option>
                   <option value="egitim">Eğitim & Mentorluk</option>
                   <option value="muzik-produksiyon">Müzik Prodüksiyonu</option>
-                  <option value="grafik-tasarim">Grafik Tasarım</option>
                   <option value="diger">Diğer</option>
                 </select>
               </div>
@@ -194,7 +189,14 @@ const Iletisim = () => {
             </div>
             
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
-              <h3 className="font-semibold text-green-300 mb-2">Nevzat Aydemir</h3>
+              <h3 className="font-semibold text-green-300 mb-2">Kadir Çelebi</h3>
+              <p className="text-gray-400 text-sm mb-2">The Peak Hotel - Üst Düzey Yönetici</p>
+              <p className="text-gray-300 text-sm">0534 766 31 1</p>
+              <p className="text-gray-300 text-sm">kadircelebi@gmail.com</p>
+            </div>
+            
+            <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
+              <h3 className="font-semibold text-yellow-300 mb-2">Nevzat Aydemir</h3>
               <p className="text-gray-400 text-sm mb-2">CityDent - Üst Düzey Yönetici</p>
               <p className="text-gray-300 text-sm">0533 601 30 55</p>
               <p className="text-gray-300 text-sm">yönetim@citydentistanbul.com</p>

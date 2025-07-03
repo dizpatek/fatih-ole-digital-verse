@@ -22,13 +22,6 @@ const Navigation = () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  const handleNavClick = () => {
-    // Sayfa başına scroll
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-  };
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-4">
@@ -55,7 +48,6 @@ const Navigation = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                onClick={handleNavClick}
                 className={({ isActive }) =>
                   `transition-colors duration-200 hover:text-blue-400 ${
                     isActive ? 'text-blue-400' : 'text-gray-300'
@@ -88,10 +80,7 @@ const Navigation = () => {
                     isActive ? 'text-blue-400' : 'text-gray-300'
                   }`
                 }
-                onClick={() => {
-                  setIsOpen(false);
-                  handleNavClick();
-                }}
+                onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </NavLink>
