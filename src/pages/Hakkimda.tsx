@@ -1,9 +1,14 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Book, Computer, Headphones, Circle, Award, Briefcase, GraduationCap, MapPin, Calendar, Phone, Mail, User, Globe } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const Hakkimda = () => {
+  useEffect(() => {
+    // Sayfa başına scroll
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <div className="container mx-auto max-w-5xl px-4 py-20">
@@ -74,16 +79,22 @@ const Hakkimda = () => {
           <Computer className="text-blue-400 mb-4" size={40} />
           <h3 className="text-2xl font-semibold mb-6 text-blue-400">Profesyonel Özet</h3>
           <p className="text-gray-300 leading-relaxed text-lg mb-4">
-            Turizm başta olmak üzere mekatronik konularında yenilikçi ve geliştirilmiş tecrübeye dayanan, 
-            bu alanlarda faaliyette olan veya üretilen tüm ürünlerin bakım onarım kullanım ve kontrol 
-            eğitimini verebilecek iyi derecede eğitim düzeyine sahip teknik İngilizce anlayabilen ve 
-            konuşabilen bir uzmanım.
+            10+ yıllık deneyime sahip çok yönlü teknik uzman olarak, elektronik ve mekatronik konularında 
+            yenilikçi ve gelişmiş tecrübeye dayanan çözümler üretiyorum. Bu alanlarda faaliyette olan 
+            veya üretilen tüm ürünlerin bakım, onarım, kullanım ve kontrol eğitimini verebilecek 
+            iyi derecede eğitim düzeyine sahip, teknik İngilizce anlayabilen ve konuşabilen bir uzmanım.
+          </p>
+          <p className="text-gray-300 leading-relaxed text-lg mb-4">
+            Elektronik cihaz tamirinden network sistemlerine, müzik prodüksiyonundan fotoğrafçılığa 
+            kadar geniş bir yelpazede profesyonel hizmet sunuyorum. Özellikle sağlık sektöründe 
+            aktif olarak çalışmakta, Taksim Meydanda bulunan özel bir diş hastanesinde Sosyal Medya, 
+            Sistem ve Network Uzmanı olarak hizmet vermekteyim.
           </p>
           <p className="text-gray-300 leading-relaxed text-lg">
-            2012-2019 arası teknik servis olarak başladığım ve müdür olarak bitirdiğim otelcilik sektöründe 
-            edindiğim deneyimlerle birlikte, artık otelcilik alanında uzaktan destek, teknik servisi ve 
-            satış müdürü olarak hizmet vermekteyim. Aktif olarak Taksim Meydanda bulunan özel bir 
-            diş hastanesinde Sosyal Medya ve Teknik Servis olarak hizmet vermekteyim.
+            Tersine mühendislik ve sistem entegrasyonu konularında uzmanlaşmış olup, grafik tasarım 
+            ve kurumsal network alanlarında da deneyim sahibiyim. Teknik İngilizce yetkinliğim ile 
+            uluslararası projeler geliştirip, müzik prodüksiyonu ve beat production konularında 
+            da aktif olarak faaliyet göstermekteyim.
           </p>
         </div>
 
@@ -136,36 +147,28 @@ const Hakkimda = () => {
           <div className="space-y-6">
             <div className="border-l-4 border-blue-500 pl-6">
               <h4 className="text-lg font-semibold text-blue-300 mb-2">Siya Sağlık Hizmetleri "CityDent"</h4>
-              <p className="text-purple-300 text-sm mb-2">Sosyal Medya, Sistem ve Network Uzmanı (2022-2025)</p>
+              <p className="text-purple-300 text-sm mb-2">Sosyal Medya, Sistem ve Network Uzmanı (2022-Devam Ediyor)</p>
               <p className="text-gray-300 text-sm">
-                Özel diş hastanesinde sosyal medya yönetimi, sistem ve network bakımı, teknik sorumluluklar 
-                ve onarım işlerini üstlendim.
+                Özel diş hastanesinde sosyal medya yönetimi, sistem ve network bakımı, teknik sorumluluklar, 
+                fotoğrafçılık ve onarım işlerini üstlendim.
               </p>
             </div>
             
             <div className="border-l-4 border-purple-500 pl-6">
               <h4 className="text-lg font-semibold text-purple-300 mb-2">Repair Hospital - Elektronik Hastanesi</h4>
-              <p className="text-green-300 text-sm mb-2">Kendi İşletmem (2019-2022)</p>
+              <p className="text-green-300 text-sm mb-2">Kendi İşletmem (2019-Devam Ediyor)</p>
               <p className="text-gray-300 text-sm">
                 Kendi işletmem olan elektronik tamir ve bakım servisini yönettim.
               </p>
             </div>
             
-            <div className="border-l-4 border-green-500 pl-6">
-              <h4 className="text-lg font-semibold text-green-300 mb-2">The Peak Hotel</h4>
-              <p className="text-yellow-300 text-sm mb-2">Teknik Servis Şefi (2017-2018)</p>
-              <p className="text-gray-300 text-sm">
-                Fancoil, AHU, kazan, chiller gibi sistemlerin kumanda, onarım ve kontrollerini düzenli 
-                olarak yaptım.
-              </p>
-            </div>
-
             <div className="border-l-4 border-yellow-500 pl-6">
               <h4 className="text-lg font-semibold text-yellow-300 mb-2">Venus Hotel</h4>
-              <p className="text-blue-300 text-sm mb-2">Satış ve Personel Müdürü (2015-2017)</p>
+              <p className="text-blue-300 text-sm mb-2">Satış ve Personel Müdürü (2015-Devam Ediyor)</p>
               <p className="text-gray-300 text-sm">
                 Otelcilik sektöründe personel yönetimi, işletme ve teknik işlerin kontrolü ile 
-                saha sorumluluğunu üstlendim.
+                saha sorumluluğunu üstlendim. Fancoil, AHU, kazan, chiller gibi sistemlerin 
+                kumanda, onarım ve kontrollerini düzenli olarak yaptım.
               </p>
             </div>
           </div>

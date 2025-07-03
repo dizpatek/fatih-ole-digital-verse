@@ -1,9 +1,14 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowDown, Calendar, MapPin, Phone, Mail, Award, Zap, Music, Settings, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
+  useEffect(() => {
+    // Sayfa başına scroll
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center max-w-5xl mx-auto">
@@ -30,12 +35,13 @@ const HeroSection = () => {
           </p>
           <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed mb-8">
             <span className="text-blue-400 font-semibold">10+ yıllık deneyime sahip</span> çok yönlü teknik uzman olarak, 
-            <span className="text-purple-400"> turizm ve mekatronik</span> alanlarında yenilikçi çözümler üretiyorum. 
+            <span className="text-purple-400"> elektronik ve mekatronik</span> alanlarında yenilikçi çözümler üretiyorum. 
             <span className="text-green-400"> Elektronik cihaz tamiri</span>nden <span className="text-yellow-400">network sistemleri</span>ne, 
             <span className="text-pink-400"> müzik prodüksiyonu</span>ndan <span className="text-cyan-400">fotoğrafçılık</span>a kadar geniş bir yelpazede 
             profesyonel hizmet sunuyorum. <span className="text-orange-400">Teknik İngilizce</span> yetkinliğim ile uluslararası projeler 
             geliştirip, <span className="text-red-400">tersine mühendislik</span> ve <span className="text-indigo-400">sistem entegrasyonu</span> 
-            konularında uzmanlaşmış bir teknisyenim.
+            konularında uzmanlaşmış bir teknisyenim. Özellikle <span className="text-emerald-400">sağlık sektörü</span> ve 
+            <span className="text-rose-400"> grafik tasarım</span> alanlarında da aktif olarak çalışmaktayım.
           </p>
           
           {/* Öne Çıkan Özellikler */}
