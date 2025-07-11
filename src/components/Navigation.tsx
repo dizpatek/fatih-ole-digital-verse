@@ -7,17 +7,17 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Anasayfa' },
-    { path: '/hakkimda', label: 'Hakkımda' },
-    { path: '/projeler', label: 'Projeler' },
-    { path: '/portfolio', label: 'Portföy' },
-    { path: '/iletisim', label: 'İletişim' },
+    { path: '/', label: 'Home' },
+    { path: '/hakkimda', label: 'About' },
+    { path: '/projeler', label: 'Projects' },
+    { path: '/portfolio', label: 'Portfolio' },
+    { path: '/iletisim', label: 'Contact' },
     { path: '/blog', label: 'Blog' },
   ];
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '905382244488';
-    const message = 'Merhaba Fatih Bey, web sitenizden ulaşıyorum. Size nasıl yardımcı olabileceğinizi öğrenmek istiyorum.';
+    const message = 'Hello Fatih, I am reaching out from your website. I would like to learn how you can help me.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -92,7 +92,7 @@ const Navigation = () => {
               }}
               className="w-full text-left py-2 px-4 text-green-400 hover:text-green-300 transition-colors duration-200"
             >
-              WhatsApp İletişim
+              WhatsApp Contact
             </button>
           </div>
         )}
