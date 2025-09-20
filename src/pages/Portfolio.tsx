@@ -147,7 +147,7 @@ const Portfolio = () => {
           tech: ['Adobe Creative Suite', 'Figma', 'Illustrator'],
           status: 'Freelance',
           link: '#',
-          image: 'https://images.unsplash.com/photo-1558655146-364adaf921dc?w=400&h=200&fit=crop'
+          image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=200&fit=crop'
         },
         {
           title: 'Animation and Motion Graphics',
@@ -169,7 +169,7 @@ const Portfolio = () => {
           tech: ['Cisco', 'Ubiquiti', 'pfSense', 'VLAN Configuration'],
           status: 'Expert',
           link: '#',
-          image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop'
+          image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=200&fit=crop'
         },
         {
           title: 'IP Camera Security Systems',
