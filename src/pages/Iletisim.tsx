@@ -40,9 +40,7 @@ const Iletisim = () => {
                   <MapPin className="text-purple-400 mt-1" size={24} />
                   <div>
                     <h3 className="font-semibold text-purple-400 mb-1">Adres</h3>
-                    <p className="text-gray-300">Süruri Mehmet Efendi Mahallesi</p>
-                    <p className="text-gray-300">Eyyühüm Sokak</p>
-                    <p className="text-gray-300">Beyoğlu, İstanbul - Türkiye</p>
+                    <p className="text-gray-300">-</p>
                   </div>
                 </div>
                 
@@ -81,7 +79,7 @@ const Iletisim = () => {
                 
                 <div>
                   <h3 className="font-semibold text-yellow-300 mb-2">Maaş Beklentisi</h3>
-                  <p className="text-gray-300 text-sm">75.000 TL+ (Net) + Yol-Yemek-Sigorta-Prim</p>
+                  <p className="text-gray-300 text-sm">Hak ettiği kadar</p>
                 </div>
                 
                 <div>
@@ -198,41 +196,41 @@ const Iletisim = () => {
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
               <h3 className="font-semibold text-blue-300 mb-2">Mehmet Yücelay</h3>
               <p className="text-gray-400 text-sm mb-2">Royal Asansör - Teknik Uzman</p>
-              <p className="text-gray-300 text-sm">0545 569 65 31</p>
+              <p className="text-gray-300 text-sm">0545 569 ** **</p>
               <p className="text-gray-300 text-sm">m.yucelay@gmail.com</p>
             </div>
             
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
               <h3 className="font-semibold text-purple-300 mb-2">Alparslan Kabil</h3>
               <p className="text-gray-400 text-sm mb-2">Alpaş Asansör - Üst Düzey Yönetici</p>
-              <p className="text-gray-300 text-sm">0532 284 39 84</p>
+              <p className="text-gray-300 text-sm">0532 284 ** **</p>
             </div>
             
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
               <h3 className="font-semibold text-green-300 mb-2">Kadir Çelebi</h3>
               <p className="text-gray-400 text-sm mb-2">The Peak Hotel - Üst Düzey Yönetici</p>
-              <p className="text-gray-300 text-sm">0534 766 31 1</p>
+              <p className="text-gray-300 text-sm">0534 766 ** *</p>
               <p className="text-gray-300 text-sm">kadircelebi@gmail.com</p>
             </div>
             
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
               <h3 className="font-semibold text-yellow-300 mb-2">Nevzat Aydemir</h3>
               <p className="text-gray-400 text-sm mb-2">CityDent - Üst Düzey Yönetici</p>
-              <p className="text-gray-300 text-sm">0533 601 30 55</p>
+              <p className="text-gray-300 text-sm">0533 601 ** **</p>
               <p className="text-gray-300 text-sm">yönetim@citydentistanbul.com</p>
             </div>
             
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
               <h3 className="font-semibold text-blue-300 mb-2">Çağlar Aksoylar</h3>
               <p className="text-gray-400 text-sm mb-2">The Galliard - Üst Düzey Yönetici</p>
-              <p className="text-gray-300 text-sm">0532 256 90 21</p>
+              <p className="text-gray-300 text-sm">0532 256 ** **</p>
               <p className="text-gray-300 text-sm">caksoylar@thegalliard.com</p>
             </div>
             
             <div className="bg-gray-700/30 rounded-lg p-6 border border-gray-600">
               <h3 className="font-semibold text-purple-300 mb-2">Volkan Gümüş</h3>
               <p className="text-gray-400 text-sm mb-2">Dizayn Elektro Pano - Üst Düzey Yönetici</p>
-              <p className="text-gray-300 text-sm">0536 560 92 00</p>
+              <p className="text-gray-300 text-sm">0536 560 ** **</p>
             </div>
           </div>
         </div>
