@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# Fatih's Digital Verse
 
-## Project info
+Welcome to my personal portfolio website, "Digital Verse". This project showcases my work, skills, and professional journey in software development, 3D design, and digital innovation.
 
-**URL**: https://lovable.dev/projects/4313ee84-5eb8-4cc3-8948-8a8c04705c20
+![Digital Verse](./public/og-image.png)
 
-## How can I edit this code?
+## 🌟 Overview
 
-There are several ways of editing your application.
+This is a modern, interactive, and visually stunning portfolio website built to represent my digital identity. It features a 3D animated background, glassmorphism UI elements, and a dynamic presentation of my projects and expertise.
 
-**Use Lovable**
+**Live Demo:** [https://fatih-ole-digital-verse.vercel.app](https://fatih-ole-digital-verse.vercel.app)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4313ee84-5eb8-4cc3-8948-8a8c04705c20) and start prompting.
+## ✨ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **3D Interactive Background**: A captivating 3D robot scene using Spline that tracks mouse movement.
+- **Dynamic Projects Section**: Showcases my GitHub repositories with live demo links and interactive cards.
+- **Modern UI/UX**: Built with a "dark mode" aesthetic, using glassmorphism, glowing effects, and smooth transitions.
+- **Responsive Design**: Fully optimized for all devices, from desktops to mobile phones.
+- **Project Details**: Detailed modal views for each project, including technologies used, features, and credentials for demos.
 
-**Use your preferred IDE**
+## 🛠️ Technologies Used
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This project leverages the power of modern web technologies:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend Framework**: [React](https://reactjs.org/) (with TypeScript)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **3D Graphics**: [Spline](https://spline.design/) (`@splinetool/react-spline`)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+To run this project locally:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/dizpatek/fatih-ole-digital-verse.git
+    cd fatih-ole-digital-verse
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
 
-**Edit a file directly in GitHub**
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📂 Project Structure
 
-**Use GitHub Codespaces**
+- `src/components`: Reusable UI components (Layout, Navbar, FeaturedProjects, etc.).
+- `src/pages`: Main page views (Home, Projects, About, Contact).
+- `src/lib`: Utility functions and helpers.
+- `public`: Static assets (images, icons).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 👤 Author
 
-## What technologies are used for this project?
+**Fatih Sontürk**
 
-This project is built with:
+- **GitHub**: [@dizpatek](https://github.com/dizpatek)
+- **LinkedIn**: [Fatih Sontürk](https://www.linkedin.com/in/fatih-sonturk) (Update with your actual LinkedIn URL if different)
+- **Website**: [Digital Verse](https://fatih-ole-digital-verse.vercel.app)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📄 License
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4313ee84-5eb8-4cc3-8948-8a8c04705c20) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
