@@ -109,6 +109,33 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
+  
+  /* Allow mouse events to pass through layout containers to the background */
+  main {
+    pointer-events: none;
+  }
+  
+  /* Re-enable pointer events for actual content */
+  main p, 
+  main h1, 
+  main h2, 
+  main h3, 
+  main h4, 
+  main h5, 
+  main h6, 
+  main span, 
+  main a, 
+  main button, 
+  main img, 
+  main svg, 
+  main input, 
+  main textarea, 
+  main select,
+  main label,
+  .card,
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {

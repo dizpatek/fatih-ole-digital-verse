@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
+import { SplineScene } from './ui/spline-scene';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -7,13 +8,22 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
-      {/* Animated background */}
-      <div className="fixed inset-0 bg-gradient-mesh pointer-events-none" />
-      
-      {/* Starry particles */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_hsl(var(--background))_70%)]" />
+    <div className="min-h-screen bg-background text-foreground font-sans relative overflow-hidden">
+      {/* 3D Animated Background - Robot */}
+      <div className="fixed inset-0 z-0">
+        <SplineScene
+          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+          className="w-full h-full"
+        />
+      </div>
+
+      {/* Starry particles overlay - moved behind robot or kept as subtle overlay? 
+          User removed 'opacity' so robot is clear. 
+          Let's keep particles Z-0 but make sure they don't block robot.
+          They are pointer-events-none.
+      */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        {/* Removed obstructive radial gradient */}
         {/* Animated stars */}
         {Array.from({ length: 50 }).map((_, i) => (
           <div
@@ -28,16 +38,16 @@ const Layout = ({ children }: LayoutProps) => {
           />
         ))}
       </div>
-      
+
       {/* Gradient orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         <div className="absolute top-3/4 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
       </div>
-      
+
       <Navigation />
-      
+
       <main className="relative z-10 pt-16">
         {children}
       </main>

@@ -25,26 +25,53 @@ const FeaturedProjectsSection = () => {
 
   const projects = [
     {
-      icon: Settings,
-      title: 'Medical Device Systems',
-      description: 'Maintenance, repair and system integration of dental and medical devices',
+      icon: Code,
+      title: 'Mexc Ultimate Trading Bot',
+      description: 'Advanced automated trading bot for Mexc exchange with real-time analysis.',
       color: 'primary',
-      tags: ['Healthcare', 'Electronics', 'Calibration'],
+      tags: ['Trading', 'Automation', 'Crypto'],
+      url: 'https://mexc-ultimate-trading-bot.vercel.app'
     },
     {
-      icon: Music,
-      title: 'Techno Beat Production',
-      description: 'Original techno music productions and sound design works',
+      icon: Settings,
+      title: 'Hydro Flower Machine',
+      description: 'Automated hydroponic farming system for optimal plant growth control.',
       color: 'secondary',
-      tags: ['Ableton', 'Sound Design', 'Mastering'],
+      tags: ['IoT', 'Agriculture', 'Automation'],
+      url: 'https://hydroflowermachime.vercel.app/'
+    },
+    {
+      icon: Folder,
+      title: 'Hospital Management',
+      description: 'Comprehensive management system for hospital operations and patient data.',
+      color: 'accent',
+      tags: ['Healthcare', 'Management', 'System'],
+      url: 'https://hospital-two-rouge.vercel.app/'
     },
     {
       icon: Code,
-      title: 'Network & Security',
-      description: 'Corporate network systems and security infrastructure setup',
-      color: 'accent',
-      tags: ['Cisco', 'Firewall', 'VPN'],
+      title: 'SigNeedProv2',
+      description: 'Digital signature and identity verification provider service.',
+      color: 'primary',
+      tags: ['Security', 'Identity', 'Web'],
+      url: 'https://sig-need-prov2.vercel.app/'
     },
+    {
+      icon: Settings,
+      title: 'Drop Machine',
+      description: 'Automated drop distribution system for simplified logistics.',
+      color: 'secondary',
+      tags: ['Automation', 'Logistics', 'System'],
+      url: 'https://dizpatek.github.io/Drop-Machine/'
+    },
+    {
+      icon: Settings,
+      title: 'Venus Hotel Portal',
+      description: 'Modern hotel management and booking portal.',
+      color: 'accent',
+      tags: ['Tourism', 'Booking', 'Portal'],
+      url: 'https://venus-hotel-portal.lovable.app'
+    }
   ];
 
   return (
@@ -54,43 +81,46 @@ const FeaturedProjectsSection = () => {
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-4">
             <Folder className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Recent Work</span>
+            <span className="text-sm text-muted-foreground">GitHub Repositories</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text-primary">
             Featured Projects
           </h2>
         </div>
-        
+
         {/* Projects grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
-            <div
+            <a
               key={index}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`group transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="relative glass rounded-2xl p-8 h-full card-hover shine overflow-hidden">
                 {/* Gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-${project.color}/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+
                 {/* Icon */}
                 <div className={`relative w-14 h-14 rounded-2xl bg-${project.color}/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <project.icon className={`w-7 h-7 text-${project.color}`} />
                 </div>
-                
+
                 {/* Content */}
                 <h3 className={`text-xl font-display font-semibold mb-3 text-${project.color} group-hover:gradient-text-primary transition-all`}>
                   {project.title}
                 </h3>
-                
-                <p className="text-muted-foreground mb-6">
+
+                <p className="text-muted-foreground mb-6 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <span 
+                    <span
                       key={tagIndex}
                       className="px-3 py-1 text-xs rounded-full bg-muted text-muted-foreground"
                     >
@@ -98,17 +128,17 @@ const FeaturedProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 {/* View project link */}
                 <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
-                  <span>View Details</span>
+                  <span>View Repository</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
-        
+
         {/* CTA */}
         <div className={`text-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Link
