@@ -4,10 +4,31 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentTime, setCurrentTime] = useState('');
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Update time immediately and then every second
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    
+    return () => clearInterval(interval);
   }, []);
+
+  const updateTime = () => {
+    const now = new Date();
+    // Set to Istanbul timezone
+    const istanbulTime = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Istanbul',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(now);
+    
+    setCurrentTime(istanbulTime);
+  };
 
   const features = [
     { icon: Zap, label: '10+ Years Experience', color: 'text-primary' },
@@ -71,6 +92,15 @@ const HeroSection = () => {
             from <span className="text-secondary font-medium">music production</span> to <span className="text-info font-medium">photography</span>, I provide 
             professional services across a wide spectrum.
           </p>
+        </div>
+        
+        {/* Current Time in Istanbul */}
+        <div className={`mb-8 transition-all duration-700 delay-250 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass">
+            <Globe size={16} className="text-primary" />
+            <span className="text-sm text-foreground">Current time in Istanbul: </span>
+            <span className="font-mono font-bold text-primary">{currentTime}</span>
+          </div>
         </div>
         
         {/* Key Features */}
